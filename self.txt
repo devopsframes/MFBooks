@@ -1,0 +1,83 @@
+  
+
+What is deadlock? 
+Deadlock occurs when transactions executing at the same time lock each other out of data that they need to complete their logical units of work. 
+ 
+What are the three lock types? 
+ 
+
+The three types are shared, update and exclusive. Shared locks allow two or more programs to read simultaneously but not change the locked space. An exclusive lock bars all other users from accessing the space. An update lock is less restrictive; it allows other transactions to read or acquire shared locks on the space. 
+: What is isolation level?
+--------------------------------------------------------------------------------
+ 
+Isolation Level determines the duration of the lock over a page.
+3 level are there.
+
+1. Cursor Stability : lock is retained when untill the cursor moves from one record in one page to the next record in another page. Provides WRITE Integrity.
+
+2. Repeatable Read : Lock is retained untill the commit point. When you want to read same set of row without any updates go for this one. provides READ and WRITE Integrity.
+
+3. Uncommitted Read : It is in Dataware housing applications.
+  
+What is a DB2 bind? 
+A DB2 bind is a process that builds an access path to DB2 tables. 
+ 
+Package is the executable access path code for the sql statements in the DBRM 
+
+Plan contains package list which is nothing but pointers to packages. 
+
+ ACT(REP) : Action is replace the existing one 
+ACQUIRE(USE) :locks on table and table space are imposed when it executed sql statement 
+RELEASE(COMMIT) :locks on table and table space are released on commit. 
+VALIDATE(BIND) : the authorization is validated at bind time. 
+EXPLAIN(NO) : no display of access path 
+DSN SYSTEM(DB2PROD) 
+BIND PACKAGE(ABPD1350_COL) - 
+MEMBER(PGM1) - 
+OWNER(DB2PROD) - 
+QUALIFIER(DB2PROD) - 
+ACTION(REPLACE) - 
+VALIDATE(BIND) - 
+ISOLATION(CS) - 
+RELEASE(COMMIT) - 
+CURRENTDATA(NO) - 
+EXPLAIN(NO) - 
+DEGREE(ANY) 
+BIND PACKAGE(ABPD1350_COL) - 
+MEMBER(SUB1) - 
+OWNER(DB2PROD) - 
+QUALIFIER(DB2PROD) - 
+ACTION(REPLACE) - 
+VALIDATE(BIND) - 
+ISOLATION(CS) - 
+RELEASE(COMMIT) - 
+CURRENTDATA(NO) - 
+EXPLAIN(NO) - 
+DEGREE(ANY) 
+BIND PACKAGE(ABPD1350_COL) - 
+MEMBER(SUB2) - 
+OWNER(DB2PROD) - 
+QUALIFIER(DB2PROD) - 
+ACTION(REPLACE) - 
+VALIDATE(BIND) - 
+ISOLATION(CS) - 
+RELEASE(COMMIT) - 
+CURRENTDATA(NO) - 
+EXPLAIN(NO) - 
+DEGREE(ANY) 
+BIND PACKAGE(ABPD1350_COL) - 
+MEMBER(SUB3) - 
+OWNER(DB2PROD) - 
+QUALIFIER(DB2PROD) - 
+ACTION(REPLACE) - 
+VALIDATE(BIND) - 
+ISOLATION(CS) - 
+RELEASE(COMMIT) - 
+CURRENTDATA(NO) - 
+EXPLAIN(NO) - 
+DEGREE(ANY) 
+
+what is your goal? 
+I want to see myself in a good position in IT industry like a team lead! 
+
+Use the LOAD utility to load one or more persistent tables of a table space, or one or more partitions of a table space. The LOAD utility operates on a table space, so you must have authority for all tables in the table space when you run LOAD.
