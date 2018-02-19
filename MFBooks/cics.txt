@@ -1,0 +1,14 @@
+1.quasi-reentrancy?
+
+There are times when many users are concurrently using the same program, this is what we call MultiThreading. For example, 50 users are using program A, CICS will provide 50 Working storage for that program but one Procedure Division. And this technique is known as quasi-reentrancy
+
+ 
+2.What is the differences between operation of Pseudo-Conversational and a conversational program ? 
+
+A In a conversational mode, the program accomplishes the conversation by simply sending a message to the terminal, and waiting for the user to respond, and receiving the response from the terminal. The system that sits idle without allowing an other operation while waiting for the data is called a conversational program. 
+
+In a Pseudo-Conversational program, a program attempts a conversation with a terminal user, it terminates the task after sending a message with a linkage for the next task. When the user completes the response the next task is automatically initiated. Pseudo-conversational program's uses the CICS resources such as control tables efficiently. 
+
+3.PSEUDO Conversational Processing.
+
+The programming methodology in which the task will not wait for the terminal users response, but frees and resources after sending the message is call a PSEDUDO Conversational Technique. Terminating the task every time the application needs a response from the user and then starting the next transaction when the user presses a attention key is PSEUDO Conversational Processing.
